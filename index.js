@@ -1,6 +1,7 @@
 import createBareServer from '@tomphttp/bare-server-node';
 import express from 'express';
 import http from 'http';
+import fs from "fs"
 
 const httpServer = http.createServer();
 const app = express()
@@ -46,6 +47,14 @@ const options = {
   redirect: false
 }
 app.use('/', express.static('public', options))
+
+app.get('/list', (req, res) => {
+  fs.readFile('./data/list.json', function (err, data) {
+    res.setHeader('Content-Type', 'application/json')
+    res.send(data)
+  })
+})
+
 
 httpServer.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

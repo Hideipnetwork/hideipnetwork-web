@@ -17,56 +17,6 @@ body {
     height: auto;
 }
 
-.header {
-    position: sticky;
-    top: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    height: 80px;
-    background-color: #e6e7ee;
-    z-index: 99;
-}
-
-.header .left {
-    margin-left: 105px;
-    padding: 15px 20px;
-    text-align: center;
-    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-}
-
-.header .left a {
-    text-decoration: none;
-    color: #030303;
-}
-
-.header .right {
-    display: flex;
-}
-
-.header .right div {
-    height: 45px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin: 0 15px;
-    padding: 15px 20px;
-    position: relative;
-    letter-spacing: 0.025em;
-    border-color: #D1D9E6;
-    box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
-}
-
-.header .right div a {
-    height: 45px;
-    text-decoration: none;
-    color: #030303;
-}
-
 .content {
     position: relative;
     width: 100vw;

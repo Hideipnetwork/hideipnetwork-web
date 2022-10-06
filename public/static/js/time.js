@@ -17,4 +17,3 @@ function Time() {
     currentTime = year + "年" + month + "月" + day + "日 " + hours + ":" + minutes;
 };
 setInterval("Time()", 1000);
-

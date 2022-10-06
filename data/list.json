@@ -1,0 +1,28 @@
+{
+    "list": [
+        {
+            "text": "Youtube",
+            "url": "https://www.youtube.com"
+        },
+        {
+            "text": "Github",
+            "url": "https://www.github.com"
+        },
+        {
+            "text": "Telegram",
+            "url": "https://web.tel.onl"
+        },
+        {
+            "text": "Twitch",
+            "url": "https://twitch.tv"
+        },
+        {
+            "text": "Netflix",
+            "url": "https://www.netflix.com"
+        },
+        {
+            "text": "Pixiv",
+            "url": "https://www.pixiv.net/"
+        }
+    ]
+}

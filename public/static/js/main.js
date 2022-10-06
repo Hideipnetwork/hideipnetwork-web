@@ -28,30 +28,7 @@ new Vue({
             siteLink: ''
         },
         imgArr: [],
-        listArr: [{
-            text: 'Youtube',
-            url: "https://www.youtube.com"
-        },
-        {
-            text: 'Github',
-            url: "https://www.github.com"
-        },
-        {
-            text: "Telegram",
-            url: 'https://web.tel.onl'
-        },
-        {
-            text: 'Twitch',
-            url: 'https://twitch.tv'
-        },
-        {
-            text: 'Netflix',
-            url: 'https://www.netflix.com'
-        },
-        {
-            text: 'Pixiv',
-            url: 'https://www.pixiv.net/'
-        },],
+        listArr: [],
         wdArr: [],
         bookArr: [{
             icon: 'https://store.heytapimage.com/cdo-portal/feedback/202209/01/5b2af43d6cdd374437444d1e9cc7c405.png',
@@ -72,10 +49,12 @@ new Vue({
             'text-shadow: 2px 2px black',
             'padding: 10px',
         ].join(';');
-        console.log('%c本项目由主系统抽离\n特供开发者自由部署\nhttps://hideip.network', styles);
+        console.log('%c本项目由主系统抽离\n特供开发者自由部署\n@t.me/hideipnetwork\nhttps://github.com/Hideipnetwork\nhttps://hideip.network', styles);
     },
     mounted() {
         this.baiduWdApi()
+        this.getList()
+
 
         /***********************/
         if (this.getLocalStronge('set')) {
@@ -117,14 +96,22 @@ new Vue({
                 }
             });
         },
-        handleChoose(item, index) {/*list selection event*/ },
+        handleChoose(item, index) {
+            this.val = item.url
+            this.handleCheck()
+        },
+        getList() {
+            fetch('/list').then(data => data.json()).then(res => {
+                this.listArr = res.list;
+            })
+        },
         checkBlur() {
             if (this.val == '' || this.val == null) {
                 setTimeout(() => {
                     this.listShow = false;
                     this.isZindex = false;
                     this.wdArr = this.listArr;
-                }, 3000)
+                }, 1500)
             }
         },
         checkFocus() {
@@ -183,8 +170,7 @@ new Vue({
         },
         addBook(index, item) {
             const arrL = this.bookArr.length - 1;
-            let key = this.getCookie('key');
-            if (index == arrL && key) {
+            if (index == arrL) {
                 this.digLog = true;
             } else {
                 this.val = item.link
