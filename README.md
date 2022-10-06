@@ -41,9 +41,7 @@ location / {
 
 ![](https://store.heytapimage.com/cdo-portal/feedback/202207/02/b705611e231f230f2fec150f35221c0b.png)
 
-## Donate
 
-![](https://store.heytapimage.com/cdo-portal/feedback/202210/06/2f0390d88de6654c9193529b288ebeab.png)
 
 ## License
 
