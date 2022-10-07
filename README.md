@@ -6,7 +6,7 @@ hideipnetwork was developed to evade censorship on the web
 
 ---
 
-## Quickstart
+## Quickstart  |  [中文教程](https://github.com/Hideipnetwork/hideipnetwork-web/wiki/Hideipnetwork-Server)
 
 * *Need install Node.js 16+*
 
@@ -40,7 +40,6 @@ location / {
 ## contact
 
 ![](https://store.heytapimage.com/cdo-portal/feedback/202207/02/b705611e231f230f2fec150f35221c0b.png)
-
 
 
 ## License
