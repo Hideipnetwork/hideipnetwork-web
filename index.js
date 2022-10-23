@@ -48,13 +48,6 @@ const options = {
 }
 app.use('/', express.static('public', options))
 
-app.get('/list', (req, res) => {
-  fs.readFile('./data/list.json', function (err, data) {
-    res.setHeader('Content-Type', 'application/json')
-    res.send(data)
-  })
-})
-
 
 httpServer.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/server/',
+    prefix: `/aGlkZWlwbmV0d29yaw==/`,
     bare: '/bare/',
     encodeUrl: Hideipnetwork.codec.xor.encode,
     decodeUrl: Hideipnetwork.codec.xor.decode,
