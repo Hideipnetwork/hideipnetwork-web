@@ -18,6 +18,8 @@ cd hideipnetwork-web
 npm i && npm run start
 ```
 
+**Besides that, you have to deploy api** [hidwipnetwork-admin](https://github.com/Hideipnetwork/hideipnetwork-admin) !!!
+
 ## Nginx configuration
 
 ```nginx notranslate position-relative overflow-auto
