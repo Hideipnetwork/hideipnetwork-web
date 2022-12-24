@@ -8,36 +8,21 @@ hideipnetwork was developed to evade censorship on the web
 
 ## Quickstart  |  [中文教程](https://github.com/Hideipnetwork/hideipnetwork-web/wiki/Hideipnetwork-Server)
 
+1. log into your cloudflare
+2. create a workers
+3. copy the code from [workers-bare.js](https://)
+4. Create a kv storage named `BARE`, which must be called BARE
+5. Bind the created kv to workers
+6. Replace the bare service in [config](https://github.com/Hideipnetwork/hideipnetwork-web/blob/25b2be1e0f548e546bdc835796565e31fbada57a/uv/uv.config.js#L3)
+7. Copy [admin.js](https://), create an admin workers, and replace the link to global.js
 
-```
-git clone https://github.com/Hideipnetwork/hideipnetwork-web.git
-
-cd hideipnetwork-web
-
-npm i && npm run start
-```
-
-**Besides that, you have to deploy api** [hidwipnetwork-admin](https://github.com/Hideipnetwork/hideipnetwork-admin) !!!
-
-## Nginx configuration
-
-```nginx notranslate position-relative overflow-auto
-location / {
-  proxy_busy_buffers_size  512k;
-  proxy_buffers  4 512k;
-  proxy_buffer_size  256k;
-  proxy_pass http://localhost:3000;
-  proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection 'Upgrade';
-  proxy_set_header X-Real-IP $remote_addr;
-  proxy_set_header X-Forwarded-Host $host:$server_port;
-  proxy_set_header X-Forwarded-Server $host;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header Host $host;
-}
-```
 
 ## contact
 
 ![](https://store.heytapimage.com/cdo-portal/feedback/202207/02/b705611e231f230f2fec150f35221c0b.png)
+
+## Donate(TRC20)
+
+![](https://alis.pages.dev/file/7aa0321085f5e963eae40.png)
+
+TQVFVa7Hmbycp1q3r3tUdTL9NzAR1XAy9E
