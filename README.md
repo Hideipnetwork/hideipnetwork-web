@@ -22,6 +22,10 @@ hideipnetwork was developed to evade censorship on the web
 
 Developers who have code cleanliness please modify the code by themselves
 
+## Node.js Version
+
+If you need node.js version, please check [here](https://github.com/Hideipnetwork/hideipnetwork-web/tree/v1)
+
 
 ## contact
 
