@@ -12,7 +12,7 @@ hideipnetwork was developed to evade censorship on the web
 
 1. log into your cloudflare
 2. create a workers
-3. copy the code from [workers-bare.js](https://)
+3. copy the code from [workers-bare.js](https://github.com/Hideipnetwork/hideipnetwork-web/blob/main/workers-bare.js)
 4. Create a kv storage named `BARE`, which must be called BARE
 5. Bind the created kv to workers
 6. Replace the bare service in [config](https://github.com/Hideipnetwork/hideipnetwork-web/blob/25b2be1e0f548e546bdc835796565e31fbada57a/uv/uv.config.js#L3)
