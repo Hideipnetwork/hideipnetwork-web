@@ -16,6 +16,10 @@ hideipnetwork was developed to evade censorship on the web
 6. Replace the bare service in [config](https://github.com/Hideipnetwork/hideipnetwork-web/blob/25b2be1e0f548e546bdc835796565e31fbada57a/uv/uv.config.js#L3)
 7. Copy [admin.js](https://), create an admin workers, and replace the link to global.js
 
+## Warn
+
+Developers who have code cleanliness please modify the code by themselves
+
 
 ## contact
 
