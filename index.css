@@ -235,7 +235,7 @@ html, body {
     overflow: hidden;
 }
 
-.hideip{
+.hideip {
     writing-mode: vertical-lr;
     text-align: center;
     line-height: 50px;
@@ -357,6 +357,20 @@ html, body {
 }
 
 
+@media screen and (max-width:375px) {
+    .bookmark {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .modal{
+        display: none;
+    }
+}
+
 @media screen and (max-width:750px) {
     .container {
         position: relative;
@@ -417,7 +431,7 @@ html, body {
         border: none;
         padding: 0 8px 0 50px;
         color: #000;
-        font-size: 1em;
+        font-size: .8em;
     }
 
     .box .input .search {
@@ -440,6 +454,10 @@ html, body {
     }
 
     .contact {
+        display: none;
+    }
+
+    .modal{
         display: none;
     }
 }
