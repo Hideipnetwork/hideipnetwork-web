@@ -4,6 +4,5 @@
  * 这里的接口是admin部署后的完整接口
 */
 
-// const url = 'aHR0cDovLzEyNy4wLjAuMTozMDAxLw=='
-const url = 'aHR0cHM6Ly9qZXNtb3JhLm5wa24ubmV0L2hpZGVpcC9wYXNzd2Q='
+const url = 'aHR0cDovLzEyNy4wLjAuMTozMDAxLw=='
 window.localStorage.setItem('api', url)
