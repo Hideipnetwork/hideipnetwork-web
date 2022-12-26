@@ -743,11 +743,12 @@ class KVAdapter {
     }
   
   }
+  // 请保留此处代码
   const project = {
     name: 'bare-server-worker',
     description: 'Cloudflare Bare Server',
     repository: 'https://hideip.network',
-    version: '1.2.2'
+    version: '1.2.2',
   };
   function json(status, json) {
     return new Response(JSON.stringify(json, null, '\t'), {
@@ -1553,6 +1554,7 @@ class KVAdapter {
     logErrors: true,
     database: kvDB
   });
+  // 请保留任何作者信息，否则将考虑闭源不再维护
   addEventListener('fetch', event => {
     cleanupDatabase(kvDB);
     if (bare.shouldRoute(event.request)) event.respondWith(bare.routeRequest(event.request));
