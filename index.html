@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
-    <!-- <script async src="https://cdn.splitbee.io/sb.js"></script> -->
     <script src="./global.js" type="module"></script>
     <link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
     <title>HNet Web</title>
 
-    <script defer src="assets/vendor.min.js"></script>
-    <script defer src="assets/index.min.js"></script>
-    <script defer src="assets/dis.min.js"></script>
-</head>
+<script defer src="assets/vendor.min.js"></script><script defer src="assets/index.min.js"></script><script defer src="assets/dis.min.js"></script></head>
 
 <body>
     <div id="root" v-cloak class="container">
         <!-- -webkit-backdrop-filter: blur(5px);	
     backdrop-filter: blur(5px); -->
         <section class="box">
-            <div class="title">HNet Web
+            <div class="title">
+                <a href="https://github.com/hideipnetwork" target="_blank" rel="noopener noreferrer" title="部署同款服务">HNet Web</a>
                 <div class="tico">
                     <svg v-if="mode == 'night'" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
@@ -109,8 +106,6 @@
             <div class="hideip" v-if="initPwdShow">密码 {{initPwd}}</div>
         </div>
     </div>
-    <script src="/uv/uv.bundle.js"></script>
-    <script src="/uv/uv.config.js"></script>
 </body>
 
 </html>
