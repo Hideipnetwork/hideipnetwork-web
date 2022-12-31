@@ -1,6 +1,14 @@
+/**
+ * Just replace BAREUR
+ */ 
+const BAREURL = 'https://yourdomain'
+
+/**
+ * Non-developers, please modify without authorization, 98% report errors!
+*/
 self.__uv$config = {
     prefix: `/aHR0cHM6Ly9naXRodWIuY29tL2hpZGVpcG5ldHdvcms=/`,
-    bare: `/bare/`,
+    bare: `${BAREURL}/bareServer/`,
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/server/server.handler.js',
