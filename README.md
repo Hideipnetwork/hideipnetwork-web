@@ -16,7 +16,7 @@ hideipnetwork was developed to evade censorship on the web
 4. Create a kv storage named `BARE`, which must be called BARE
 5. Bind the created kv to workers
 6. clone this project
-7. Replace the bare service in [config](https://github.com/Hideipnetwork/hideipnetwork-web/blob/ded308b34c316a42852dcce5bb5a0ac1dd66b131/server/server.config.js#L3)
+7. Replace the bare service in [config](https://github.com/Hideipnetwork/hideipnetwork-web/blob/6ab98912298f62a2cd01a082523287631594c525/server/server.config.js#L4)
 8. deploy the project to website
 
 ## Warn
