@@ -21,6 +21,20 @@ class UserServices {
         })
         return { token, username, isAdmin: true };
     }
+
+    async changePwd({ password, newpassword, id }) {
+        try {
+            await userModel.update({ password, newpassword }, {
+                where: {
+                    id,
+                    password
+                }
+            })
+            return { msg: 'password updated successfully' }
+        } catch (error) {
+            return { msg: 'password updated faied' }
+        }
+    }
 }
 
 export default new UserServices();
