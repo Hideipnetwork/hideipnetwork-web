@@ -1,11 +1,10 @@
-import { SiteModel } from "../models/site.model.mjs";
-import { v4 as uuidv4 } from 'uuid';
+import { siteModel } from "../models/site.model.mjs";
 
 class SiteServices {
     async addSite(data) {
         try {
             const { website, sitename, status, remark } = data
-            const res = await SiteModel.findOrCreate({
+            const res = await siteModel.findOrCreate({
                 where: {
                     website
                 },
@@ -26,7 +25,7 @@ class SiteServices {
 
     async delSite(id) {
         try {
-            const data = await SiteModel.destroy({
+            const data = await siteModel.destroy({
                 where: {
                     id
                 }
@@ -39,7 +38,7 @@ class SiteServices {
 
     async editSite({ id, status }) {
         try {
-            const data = await SiteModel.update({ status }, {
+            const data = await siteModel.update({ status }, {
                 where: {
                     id
                 }
@@ -51,7 +50,7 @@ class SiteServices {
     }
 
     async getSite() {
-        const data = await SiteModel.findAll()
+        const data = await siteModel.findAll()
         return data;
     }
 }

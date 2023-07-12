@@ -1,6 +1,6 @@
 import * as sql from "../database/sequelize.mjs";
 
-export const UserModel = sql.sequelize.define('user', {
+export const userModel = sql.sequelize.define('user', {
     id: {
         type: sql.Sequelize.BIGINT(20),
         primaryKey: true,

@@ -1,23 +1,23 @@
-import SiteServices from "../services/site.services.mjs";
+import siteServices from "../services/site.services.mjs";
 
 class SiteController {
     async addSite(req, res) {
-        const data = await SiteServices.addSite(req.body);
+        const data = await siteServices.addSite(req.body);
         return res.json({ code: 200, data });
     }
 
     async delSite(req, res) {
-        const data = await SiteServices.delSite(req.params.id);
+        const data = await siteServices.delSite(req.params.id);
         return res.json({ code: 200, data });
     }
 
     async editSite(req, res) {
-        const data = await SiteServices.editSite(req.params);
+        const data = await siteServices.editSite(req.params);
         return res.json({ code: 200, data });
     }
 
     async getSite(req, res) {
-        const data = await SiteServices.getSite();
+        const data = await siteServices.getSite();
         return res.json({ code: 200, data });
     }
 }

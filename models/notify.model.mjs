@@ -1,6 +1,6 @@
 import * as sql from "../database/sequelize.mjs";
 
-export const notify = sql.sequelize.define('notify', {
+export const notifyModel = sql.sequelize.define('notify', {
     id: {
         type: sql.Sequelize.BIGINT(20),
         primaryKey: true,

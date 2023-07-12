@@ -1,11 +1,11 @@
-import SiteController from "../controller/site.controller.mjs";
+import siteController from "../controller/site.controller.mjs";
 import express from 'express';
 
-const SiteRoute = express.Router();
+const siteRoute = express.Router();
 
-SiteRoute.post('/addSite', SiteController.addSite)
-SiteRoute.delete('/delSite/:id', SiteController.delSite)
-SiteRoute.put('/editSite/:id/:status', SiteController.editSite)
-SiteRoute.get('/getSite', SiteController.getSite)
+siteRoute.post('/addSite', siteController.addSite)
+siteRoute.delete('/delSite/:id', siteController.delSite)
+siteRoute.put('/editSite/:id/:status', siteController.editSite)
+siteRoute.get('/getSite', siteController.getSite)
 
-export default SiteRoute;
+export default siteRoute;
