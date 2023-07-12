@@ -1,9 +1,10 @@
 import { siteModel } from "../models/site.model.mjs";
+import { disableWebsite, enableWebsite } from "../utils/ban.mjs";
 
 class SiteServices {
     async addSite(data) {
         try {
-            const { website, sitename, status, remark } = data
+            const { website, sitename, status, remark } = data;
             const res = await siteModel.findOrCreate({
                 where: {
                     website
@@ -17,6 +18,7 @@ class SiteServices {
                     update_time: new Date()
                 }
             })
+            status ? await disableWebsite(website) : await enableWebsite(website);
             return res;
         } catch (error) {
             return error
@@ -25,6 +27,12 @@ class SiteServices {
 
     async delSite(id) {
         try {
+            const res = await siteModel.findOne({
+                where: {
+                    id
+                }
+            })
+            res.status ? await disableWebsite(website) : await enableWebsite(website);
             const data = await siteModel.destroy({
                 where: {
                     id
@@ -38,11 +46,18 @@ class SiteServices {
 
     async editSite({ id, status }) {
         try {
+            const res = await siteModel.findOne({
+                where: {
+                    id
+                }
+            })
+            res.status ? await disableWebsite(website) : await enableWebsite(website);
             const data = await siteModel.update({ status }, {
                 where: {
                     id
                 }
             })
+            status ? await disableWebsite(website) : await enableWebsite(website);
             return data;
         } catch (error) {
 
