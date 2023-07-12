@@ -20,6 +20,12 @@ class SiteController {
         const data = await siteServices.getSite();
         return res.json({ code: 200, data });
     }
+
+    async checkSite(req, res) {
+        const website = req.query.website;
+        const data = await siteServices.checkSite({ website })
+        return res.json({ code: 200, data })
+    }
 }
 
 export default new SiteController();

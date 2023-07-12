@@ -53,6 +53,19 @@ class SiteServices {
         const data = await siteModel.findAll()
         return data;
     }
+
+    async checkSite({ website }) {
+        try {
+            const data = await siteModel.findOne({
+                where: {
+                    website
+                }
+            })
+            return data
+        } catch (error) {
+
+        }
+    }
 }
 
 export default new SiteServices();
