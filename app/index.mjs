@@ -1,5 +1,5 @@
 import http from 'node:http';
-import * as bare from "../server/bs.index.mjs";
+import * as bare from "../bs/bs.index.mjs";
 
 const httpServer = http.createServer();
 
