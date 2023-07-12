@@ -1,6 +1,6 @@
 import * as sql from "../database/sequelize.mjs";
 
-export const site = sql.sequelize.define('site', {
+export const SiteModel = sql.sequelize.define('site', {
     id: {
         type: sql.Sequelize.BIGINT(20),
         primaryKey: true,
@@ -9,7 +9,7 @@ export const site = sql.sequelize.define('site', {
         autoIncrement: true
     },
     website: sql.Sequelize.STRING(255), // website
-    name: sql.Sequelize.STRING(255), // 
+    sitename: sql.Sequelize.STRING(255), // 
     status: sql.Sequelize.BOOLEAN(true), // website status
     remark: sql.Sequelize.STRING(255),
     create_time: sql.Sequelize.DATE,
