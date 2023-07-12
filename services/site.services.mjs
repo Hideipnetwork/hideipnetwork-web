@@ -32,7 +32,7 @@ class SiteServices {
                     id
                 }
             })
-            res.status ? await disableWebsite(website) : await enableWebsite(website);
+            res.status ? await disableWebsite(res.website) : await enableWebsite(res.website);
             const data = await siteModel.destroy({
                 where: {
                     id
@@ -51,13 +51,12 @@ class SiteServices {
                     id
                 }
             })
-            res.status ? await disableWebsite(website) : await enableWebsite(website);
+            res.status ? await disableWebsite(res.website) : await enableWebsite(res.website);
             const data = await siteModel.update({ status }, {
                 where: {
                     id
                 }
             })
-            status ? await disableWebsite(website) : await enableWebsite(website);
             return data;
         } catch (error) {
 
