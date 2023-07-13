@@ -17,8 +17,8 @@ class SiteController {
     }
 
     async getSite(req, res) {
-        const data = await siteServices.getSite();
-        return res.json({ code: 200, data });
+        const { data, total } = await siteServices.getSite();
+        return res.json({ code: 200, total, data });
     }
 
     async checkSite(req, res) {

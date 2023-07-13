@@ -64,8 +64,14 @@ class SiteServices {
     }
 
     async getSite() {
-        const data = await siteModel.findAll()
-        return data;
+        const data = await siteModel.findAll({
+            offset: 0, limit: 10,
+            order: [
+                ['create_time', 'DESC'],
+            ]
+        })
+        const total = await siteModel.count();
+        return { data, total };
     }
 
     async checkSite({ website }) {
