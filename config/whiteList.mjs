@@ -1,0 +1,5 @@
+export const whiteList = [
+    "/api/v1/signin",
+    "/api/v1/signup",
+    "/api/v1/checkSite"
+]
