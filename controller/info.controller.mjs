@@ -7,8 +7,13 @@ class InfoController {
     }
 
     async editInfo(req, res) {
-        const data = await infoServices.editInfo(req.body)
+        const data = await infoServices.editInfo(req.params.id, req.body)
         return res.json({ code: 200, data })
+    }
+
+    async addInfo(req, res) {
+        const data = await infoServices.addInfo(req.body);
+        res.json({ code: 200, data })
     }
 }
 
