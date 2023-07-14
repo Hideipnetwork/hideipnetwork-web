@@ -1,6 +1,6 @@
 import * as sql from "../database/sequelize.mjs";
 
-export const infoModel = sql.sequelize.define('info', {
+export const infoModel = sql.sequelize.define('hnet_info', {
     id: {
         type: sql.Sequelize.BIGINT(20),
         primaryKey: true,

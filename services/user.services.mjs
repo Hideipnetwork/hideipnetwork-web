@@ -7,27 +7,27 @@ class UserServices {
         const { username, password } = data
         if (!username && !password) return { code: 200, msg: "username or password is null", data: {} };
         const token = jwt.sign({ username: username, isAdmin: true }, secretKey, { expiresIn: '1h' })
-        await userModel.findOrCreate({
+        const { id } = await userModel.findOne({
             where: {
                 username
             },
-            defaults: {
-                username,
-                password,
-                isAdmin: true,
-                create_time: new Date(),
-                update_time: new Date()
-            }
+            // defaults: {
+            //     username,
+            //     password,
+            //     isAdmin: true,
+            //     create_time: new Date(),
+            //     update_time: new Date()
+            // }
         })
-        return { token, username, isAdmin: true };
+        return { token, username, isAdmin: true, id };
     }
 
-    async changePwd({ password, newpassword, id }) {
+    async changePwd({ password, id, username }) {
         try {
-            await userModel.update({ password, newpassword }, {
+            await userModel.update({ password }, {
                 where: {
                     id,
-                    password
+                    username
                 }
             })
             return { msg: 'password updated successfully' }

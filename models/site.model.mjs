@@ -1,6 +1,6 @@
 import * as sql from "../database/sequelize.mjs";
 
-export const siteModel = sql.sequelize.define('site', {
+export const siteModel = sql.sequelize.define('hnet_site', {
     id: {
         type: sql.Sequelize.BIGINT(20),
         primaryKey: true,
