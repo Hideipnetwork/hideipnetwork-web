@@ -15,6 +15,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-jwt": "^8.4.1",
+    "js-base64": "^3.7.5",
     "jsonwebtoken": "^9.0.1",
     "mysql2": "^3.5.1",
     "sequelize": "^6.32.1",

@@ -1,15 +1,20 @@
 import { infoModel } from "../models/info.model.mjs";
-
+import { Base64 } from 'js-base64';
 class InfoServices {
     async getInfo() {
-        return await infoModel.findOne();
+        try {
+            return await infoModel.findOne();
+        } catch (error) {
+
+        }
     }
 
     async addInfo({ title, password, bg, notify }) {
         try {
+            const pwd = Base64.encode(password)
             const data = await infoModel.create({
                 title,
-                password,
+                password: pwd,
                 bg,
                 notify,
                 create_time: new Date(),
@@ -24,9 +29,10 @@ class InfoServices {
     async editInfo(id, data) {
         try {
             const { title, password, bg, notify } = data;
+            const pwd = Base64.encode(password)
             const res = await infoModel.update({
                 title,
-                password,
+                password: pwd,
                 bg,
                 notify,
             }, {
