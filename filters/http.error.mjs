@@ -17,4 +17,6 @@ export function HttpError(err, req, res, next) {
 }
 
 export const Http500 = (err, req, res, next) => { res.status(500).send('Server 500') }
-export const Http404 = (req, res, next) => {res.status(404).send('404 Not Found')}
+export const Http404 = (req, res, next) => {
+    res.status(404).send('404 Not Found')
+}
