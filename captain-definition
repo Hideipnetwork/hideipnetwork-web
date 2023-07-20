@@ -9,6 +9,6 @@
                         "COPY ./ /usr/src/app",
                         "ENV PORT 56559",
                         "EXPOSE 56559",
-                        "CMD [ \"npm\", \"start\" ]"
+                        "CMD [\"npm\", \"start\"]"
                     ]
 }
