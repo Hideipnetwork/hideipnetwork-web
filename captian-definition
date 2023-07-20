@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 2,
+  "dockerfileLines": [
+                        "FROM node:18.16-alpine",
+                        "RUN mkdir -p /usr/src/app",
+                        "WORKDIR /usr/src/app",
+                        "COPY ./package.json /usr/src/app/",
+                        "RUN npm install && npm cache clean --force",
+                        "COPY ./ /usr/src/app",
+                        "ENV PORT 56559",
+                        "EXPOSE 56559",
+                        "CMD [ \"npm\", \"start\" ]"
+                    ]
+}
