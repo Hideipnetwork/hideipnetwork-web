@@ -25,10 +25,10 @@ if you don`t how to use ,please visite [official.hideip.network](https://officia
 ## 😃Custom search engine
 
 ```
-https://hideip.netowrk/?s=#%s
+https://hideip.network/?s=#%s
 ```
 
-![](https://iimg.pro/images/HWhLTOP.png)
+![](https://public.aisb.top/e06e8a0ef1a018d7b6944df936f2a3c1/HWhLTOP.png)
 
 ## 📃Configuration instructions
 
