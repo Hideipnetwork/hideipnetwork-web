@@ -3,10 +3,10 @@ import express from 'express';
 
 const siteRoute = express.Router();
 
-siteRoute.post('/addSite', siteController.addSite)
-siteRoute.delete('/delSite/:id', siteController.delSite)
-siteRoute.put('/editSite/:id/:status', siteController.editSite)
-siteRoute.get('/getSite', siteController.getSite)
+siteRoute.post('/site', siteController.addSite)
+siteRoute.delete('/site/:id', siteController.delSite)
+siteRoute.put('/site/:id/:status', siteController.editSite)
+siteRoute.get('/site', siteController.getSite)
 siteRoute.get('/checkSite', siteController.checkSite)
 
 export default siteRoute;

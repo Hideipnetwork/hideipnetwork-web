@@ -11,7 +11,8 @@ import { whiteList } from "../config/whiteList.mjs"
 const app = express();
 const secretKey = "jesmora-hnet"
 
-app.use(config.WEBDIR, express.static('public'));
+
+// app.use(config.WEBDIR, express.static('public'));
 app.use(config.ADMINDIR, express.static('dashboard'));
 app.use(bodyParser())
 app.use("/api/v1", expressjwt({ secret: secretKey, algorithms: ["HS256"] }).unless({ path: [...whiteList] }), router)

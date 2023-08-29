@@ -3,8 +3,8 @@ import express from "express";
 
 const infoRoute = express.Router();
 
-infoRoute.get("/getInfo", infoController.getInfo)
-infoRoute.put("/editInfo/:id", infoController.editInfo)
-infoRoute.post("/addInfo", infoController.addInfo)
+infoRoute.get("/info", infoController.getInfo)
+infoRoute.put("/info/:id", infoController.editInfo)
+infoRoute.post("/info", infoController.addInfo)
 
 export default infoRoute;

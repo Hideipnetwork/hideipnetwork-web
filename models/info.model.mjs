@@ -10,8 +10,11 @@ export const infoModel = sql.sequelize.define('hnet_info', {
     },
     title: sql.Sequelize.STRING(255),
     password: sql.Sequelize.STRING(255),
+    placeholder: sql.Sequelize.STRING(255),
     bg: sql.Sequelize.STRING(255),
     notify: sql.Sequelize.STRING(255),
+    keywords: sql.Sequelize.STRING(255),
+    content: sql.Sequelize.STRING(255),
     create_time: sql.Sequelize.DATE,
     update_time: sql.Sequelize.DATE
 }, {
