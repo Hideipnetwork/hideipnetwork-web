@@ -9,6 +9,31 @@ config.MODO == "socks5" ? bareServer = socksBare : bareServer = defaultBare;
 
 const app = express();
 
+function authentication(req, res, next) {
+    const auth_header = req.headers.authorization;
+    if (!auth_header) {
+        res.setHeader('WWW-Authenticate', 'Basic');
+        res.status(401).send('身份未认证');
+        return
+    }
+    const auth = new Buffer.from(auth_header.split(' ')[1],
+        'base64').toString().split(':');
+    const user = auth[0];
+    const pass = auth[1];
+
+    if (user === config.USERNAME && pass === config.PASSWORD) {
+        // If Authorized user
+        next();
+    } else {
+        res.setHeader('WWW-Authenticate', 'Basic');
+        res.status(401).send('身份认证失败');
+    }
+}
+
+if (config.SECURE === "Basic"){
+    console.log(`Basic Auth Enable, username: ${config.USERNAME} , password: ${config.PASSWORD}`)
+    app.use(authentication);
+}
 app.use(config.WEBDIR, express.static('public'));
 app.use("*",handle404)
 app.use((req, res, next) => {

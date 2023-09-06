@@ -32,12 +32,14 @@ https://hideip.netowrk/?s=#%s
 
 ## 📃Configuration instructions
 
-| .env| default|**Remark**|
-| --- | --- | --- |
-| PORT | 56559 | server port |
-| HOST | 0.0.0.0 | server resolve ip (docker `0.0.0.0`) other `127.0.0.1`|
-| MODO| normal| if you need `socks5 `,change mode to `MODO = socks5`  |
-
+| .env| default | **Remark**                                                                |
+| --- |---------|---------------------------------------------------------------------------|
+| PORT | 56559   | server port                                                               |
+| HOST | 0.0.0.0 | server resolve ip (docker `0.0.0.0`) other `127.0.0.1`                    |
+| MODO| normal  | if you need `socks5 `,change mode to `MODO = socks5`                      |
+| SECURE| normal  | If you need to enable an access password ,change mode to `SECURE = Basic` |
+| USERNAME| admin   | Enable access verification username                                       |
+| PASSWORD| 123     | Enable access verification password                                       |
 ###### * socks5  files are in the directory `proxy/socks5.txt`
 
 ## 🔨Use v2ray|Clash
