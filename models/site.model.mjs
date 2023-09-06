@@ -12,6 +12,7 @@ export const siteModel = sql.sequelize.define('hnet_site', {
     sitename: sql.Sequelize.STRING(255), // 
     status: sql.Sequelize.BOOLEAN(true), // website status
     remark: sql.Sequelize.STRING(255),
+    favicon: sql.Sequelize.STRING(255),
     create_time: sql.Sequelize.DATE,
     update_time: sql.Sequelize.DATE
 }, {

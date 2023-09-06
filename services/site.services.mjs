@@ -4,7 +4,7 @@ import { disableWebsite, enableWebsite } from "../utils/ban.mjs";
 class SiteServices {
     async addSite(data) {
         try {
-            const { website, sitename, status, remark } = data;
+            const { website, sitename, status, remark, favicon } = data;
             const res = await siteModel.findOrCreate({
                 where: {
                     website
@@ -14,6 +14,7 @@ class SiteServices {
                     sitename,
                     status,
                     remark,
+                    favicon,
                     create_time: new Date(),
                     update_time: new Date()
                 }
@@ -63,9 +64,9 @@ class SiteServices {
         }
     }
 
-    async getSite() {
+    async getSite(page, size) {
         const data = await siteModel.findAll({
-            offset: 0, limit: 10,
+            offset: page, limit: size,
             order: [
                 ['create_time', 'DESC'],
             ]
