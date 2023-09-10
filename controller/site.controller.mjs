@@ -12,12 +12,12 @@ class SiteController {
     }
 
     async editSite(req, res) {
-        const data = await siteServices.editSite(req.params);
+        const data = await siteServices.editSite(req.params.id,req.body);
         return res.json({ code: 200, data });
     }
 
     async getSite(req, res) {
-        const { page, size } = req.query
+        const { page, size } = req.params
         const { data, total } = await siteServices.getSite(page, size);
         return res.json({ code: 200, total, data });
     }

@@ -33,40 +33,43 @@ class SiteServices {
                     id
                 }
             })
-            res.status ? await disableWebsite(res.website) : await enableWebsite(res.website);
             const data = await siteModel.destroy({
                 where: {
                     id
                 }
             })
+            res.status ? await disableWebsite(res.website) : await enableWebsite(res.website);
             return data;
         } catch (error) {
 
         }
     }
 
-    async editSite({ id, status }) {
+    async editSite(id, params) {
         try {
-            const res = await siteModel.findOne({
+            const { website, sitename, status, remark } = params;
+            const data = await siteModel.update({
+                status,
+                website,
+                sitename,
+                remark,
+                update_time: new Date(),
+            }, {
                 where: {
                     id
                 }
             })
-            res.status ? await disableWebsite(res.website) : await enableWebsite(res.website);
-            const data = await siteModel.update({ status }, {
-                where: {
-                    id
-                }
-            })
+            status ? await disableWebsite(website) : await enableWebsite(website);
             return data;
         } catch (error) {
-
+            console.log(error);
         }
     }
 
     async getSite(page, size) {
         const data = await siteModel.findAll({
-            offset: page, limit: size,
+            offset: Number((page - 1) * size),
+            limit: Number(size),
             order: [
                 ['create_time', 'DESC'],
             ]

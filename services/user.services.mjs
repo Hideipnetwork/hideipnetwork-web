@@ -1,5 +1,7 @@
+import { Base64 } from "js-base64";
 import { userModel } from "../models/user.model.mjs";
 import jwt from "jsonwebtoken";
+
 
 const secretKey = "jesmora-hnet"
 class UserServices {
@@ -10,7 +12,7 @@ class UserServices {
         const res = await userModel.findOne({
             where: {
                 username,
-                password
+                password: Base64.decode(password),
             },
             // defaults: {
             //     username,
@@ -21,23 +23,25 @@ class UserServices {
             // }
         })
         if (res) {
-            return { token, username, isAdmin: true, id:res.id };
+            return { code: 200, data: { token, username, isAdmin: true, id: res.id } };
         } else {
-            return { msg: 'Invalid Password Or Username' }
+            return { code: 429, msg: 'Invalid Password Or Username' }
         }
     }
 
-    async changePwd({ password, id, username }) {
+    async changePwd(id, { oldPwd, newPwd }) {
         try {
-            await userModel.update({ password }, {
+            const { password } = await userModel.findOne()
+            if (oldPwd != password) return { code: 429, msg: 'The old password is incorrect' }
+            if (newPwd == password) return { code: 429, msg: 'The old and new passwords are the same' }
+            await userModel.update({ password: newPwd }, {
                 where: {
-                    id,
-                    username
+                    id
                 }
             })
-            return { msg: 'password updated successfully' }
+            return { code: 200, msg: 'password updated successfully' }
         } catch (error) {
-            return { msg: 'password updated faied' }
+            return { code: 500, msg: 'password updated faied' }
         }
     }
 }

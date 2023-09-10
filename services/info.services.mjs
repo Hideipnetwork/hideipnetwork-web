@@ -3,7 +3,8 @@ import { Base64 } from 'js-base64';
 class InfoServices {
     async getInfo() {
         try {
-            return await infoModel.findOne();
+            const data = await infoModel.findOne();
+            return data
         } catch (error) {
 
         }
@@ -11,10 +12,9 @@ class InfoServices {
 
     async addInfo({ title, password, bg, notify, keywords, content, placeholder }) {
         try {
-            const pwd = Base64.encode(password)
             const data = await infoModel.create({
                 title,
-                password: pwd,
+                password,
                 bg,
                 notify,
                 keywords,
@@ -29,9 +29,9 @@ class InfoServices {
         }
     }
 
-    async editInfo(id, data) {
+    async editInfo(id, params) {
         try {
-            const { title, password, bg, notify, keywords, content, placeholder } = data;
+            const { title, password, bg, notify, keywords, content, placeholder } = params;
             const pwd = Base64.encode(password)
             const res = await infoModel.update({
                 title,
