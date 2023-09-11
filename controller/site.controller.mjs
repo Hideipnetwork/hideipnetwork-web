@@ -23,8 +23,7 @@ class SiteController {
     }
 
     async checkSite(req, res) {
-        const website = req.query.website;
-        const data = await siteServices.checkSite({ website })
+        const data = await siteServices.checkSite(req.body)
         return res.json({ code: 200, data })
     }
 }

@@ -78,14 +78,19 @@ class SiteServices {
         return { data, total };
     }
 
-    async checkSite({ website }) {
+    async checkSite(params) {
         try {
+            const { text } = params
             const data = await siteModel.findOne({
                 where: {
-                    website
+                    website: text
                 }
             })
-            return data
+            if (data !== null) {
+                return { isBan: true, banSite: text }
+            } else {
+                return { isBan: false, banSite: text }
+            }
         } catch (error) {
 
         }

@@ -7,6 +7,6 @@ siteRoute.post('/site', siteController.addSite)
 siteRoute.delete('/site/:id', siteController.delSite)
 siteRoute.put('/site/:id', siteController.editSite)
 siteRoute.get('/site/:page/:size', siteController.getSite)
-siteRoute.get('/checkSite', siteController.checkSite)
+siteRoute.post('/checkSite', siteController.checkSite)
 
 export default siteRoute;

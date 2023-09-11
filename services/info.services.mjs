@@ -1,10 +1,16 @@
 import { infoModel } from "../models/info.model.mjs";
 import { Base64 } from 'js-base64';
 class InfoServices {
-    async getInfo() {
+    async getInfo(query) {
         try {
-            const data = await infoModel.findOne();
-            return data
+            if (query.id === '1') {
+                const data = await infoModel.findOne();
+                return data
+            } else if (query.id === '2') {
+                const data = await infoModel.findOne();
+                data.password !== '' ? data.password = true : data.password = false
+                return data
+            }
         } catch (error) {
 
         }
@@ -12,9 +18,10 @@ class InfoServices {
 
     async addInfo({ title, password, bg, notify, keywords, content, placeholder }) {
         try {
+            const pwd = Base64.encode(password)
             const data = await infoModel.create({
                 title,
-                password,
+                password: pwd,
                 bg,
                 notify,
                 keywords,
@@ -47,6 +54,18 @@ class InfoServices {
                 }
             })
             return res
+        } catch (error) {
+
+        }
+    }
+
+    async checkPassword({ password }) {
+        try {
+            const data = await infoModel.findOne({
+                where: {
+                    password
+                }
+            })
         } catch (error) {
 
         }
