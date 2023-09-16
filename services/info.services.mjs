@@ -3,13 +3,17 @@ import { Base64 } from 'js-base64';
 class InfoServices {
     async getInfo(query) {
         try {
-            if (query.id === '1') {
-                const data = await infoModel.findOne();
+            const data = await infoModel.findOne();
+            if (query.id == '1') {
                 return data
-            } else if (query.id === '2') {
-                const data = await infoModel.findOne();
-                data.password !== '' ? data.password = true : data.password = false
+            } else if (query.id == '2') {
+                delete data.dataValues.password
                 return data
+            } else if (query.id == '3') {
+                const obj = {
+                    ispwd: data.ispwd,
+                }
+                return obj;
             }
         } catch (error) {
 
@@ -19,9 +23,11 @@ class InfoServices {
     async addInfo({ title, password, bg, notify, keywords, content, placeholder }) {
         try {
             const pwd = Base64.encode(password)
+            const ispwd = password !== '' ? true : false
             const data = await infoModel.create({
                 title,
                 password: pwd,
+                ispwd,
                 bg,
                 notify,
                 keywords,
@@ -40,9 +46,11 @@ class InfoServices {
         try {
             const { title, password, bg, notify, keywords, content, placeholder } = params;
             const pwd = Base64.encode(password)
+            const ispwd = password !== '' ? true : false
             const res = await infoModel.update({
                 title,
                 password: pwd,
+                ispwd,
                 bg,
                 notify,
                 keywords,
@@ -61,13 +69,18 @@ class InfoServices {
 
     async checkPassword({ password }) {
         try {
+            const pwd = Base64.encode(password)
             const data = await infoModel.findOne({
                 where: {
-                    password
+                    password: pwd
                 }
             })
+            if (data) {
+                return true
+            } else {
+                return false
+            }
         } catch (error) {
-
         }
     }
 }

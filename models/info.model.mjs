@@ -15,6 +15,7 @@ export const infoModel = sql.sequelize.define('hnet_info', {
     notify: sql.Sequelize.STRING(255),
     keywords: sql.Sequelize.STRING(255),
     content: sql.Sequelize.STRING(255),
+    ispwd: sql.Sequelize.BOOLEAN(true),
     create_time: sql.Sequelize.DATE,
     update_time: sql.Sequelize.DATE
 }, {

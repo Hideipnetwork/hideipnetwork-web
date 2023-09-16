@@ -86,7 +86,7 @@ class SiteServices {
                     website: text
                 }
             })
-            if (data !== null) {
+            if (data !== null && data.status) {
                 return { isBan: true, banSite: text }
             } else {
                 return { isBan: false, banSite: text }
