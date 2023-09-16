@@ -8,8 +8,11 @@ hideipnetwork was developed to evade censorship on the web
 
 ## 😃Quickstart
 
+> **you need a mysql database, then replace the env configuration file and import hnet.sql into the database, or create it manually**
+
+
 ```
-git clone -b v3 https://github.com/Hideipnetwork/hideipnetwork-web.git
+git clone -b v3.1-beta https://github.com/Hideipnetwork/hideipnetwork-web.git
 ```
 
 ```
@@ -58,9 +61,4 @@ If you want to use the proxy of the airport, please install any client that supp
 
 Developers with code cleanliness please open it yourself
 
-## 🎞Example
-
-![](https://alis.pages.dev/file/8e00c895d4eba38855953.png)
-![](https://alis.pages.dev/file/d3a9602d60f4f7fcea23c.png)
-![](https://alis.pages.dev/file/4c62b7652dbeaa9677827.png)
 
