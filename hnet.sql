@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `hnet_info` (
   `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- 正在导出表  fastify.hnet_info 的数据：~1 rows (大约)
 INSERT IGNORE INTO `hnet_info` (`id`, `title`, `password`, `placeholder`, `bg`, `notify`, `keywords`, `content`, `ispwd`, `create_time`, `update_time`) VALUES
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `hnet_site` (
   `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- 正在导出表  fastify.hnet_site 的数据：~3 rows (大约)
 INSERT IGNORE INTO `hnet_site` (`id`, `website`, `sitename`, `status`, `remark`, `favicon`, `create_time`, `update_time`) VALUES
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `hnet_user` (
   `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- 正在导出表  fastify.hnet_user 的数据：~1 rows (大约)
 INSERT IGNORE INTO `hnet_user` (`id`, `username`, `password`, `isAdmin`, `create_time`, `update_time`) VALUES
