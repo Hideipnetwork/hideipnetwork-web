@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: jesmora/hnet-server
+    ports:
+      - "56559:56559"
+    environment:
+      HOST: 0.0.0.0
+      SECRET: "hnet-jesmora"
+      REDIRECT_HOST: "www.google.com"
+      MONGDB_CONNECTION: "----"
+      MODO: "normal"
+volumes:
+  hnet_data:
