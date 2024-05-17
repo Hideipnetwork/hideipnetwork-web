@@ -2,14 +2,12 @@ version: '3.8'
 
 services:
   app:
-    build: jesmora/hnet-server
+    image: jesmora/hnet-server
     ports:
       - "56559:56559"
     environment:
       HOST: 0.0.0.0
       SECRET: "hnet-jesmora"
       REDIRECT_HOST: "www.google.com"
-      MONGDB_CONNECTION: "----"
+      MONGODB_CONNECTION: "your_mongodb_connection_string" # 请替换成你的MongoDB连接字符串
       MODO: "normal"
-volumes:
-  hnet_data:
