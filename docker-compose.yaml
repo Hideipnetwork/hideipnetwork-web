@@ -9,5 +9,5 @@ services:
       HOST: 0.0.0.0
       SECRET: "hnet-jesmora"
       REDIRECT_HOST: "www.google.com"
-      MONGODB_CONNECTION: "your_mongodb_connection_string" # 请替换成你的MongoDB连接字符串
+      MONGDB_CONNECTION: "your_mongodb_connection_string" # 请替换成你的MongoDB连接字符串
       MODO: "normal"
