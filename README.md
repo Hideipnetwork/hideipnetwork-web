@@ -64,6 +64,6 @@ Developers with code cleanliness please open it yourself
 
 ## 🎞Example
 
-| col1 | col2 |
+| Desktop1 | Desktop2 |
 | --- | --- |
-|[![JiWbq8l.md.png](https://iili.io/JiWbq8l.md.png)](https://freeimage.host/i/JiWbq8l)  | [![JiWmveV.th.png](https://iili.io/JiWmveV.md.png)](https://freeimage.host/i/JiWmveV) |
+|[![JiWbq8l.md.png](https://iili.io/JiWbq8l.png)](https://iili.io/JiWbq8l.png)  | [![JiWmveV.th.png](https://iili.io/JiWmveV.png)](https://iili.io/JiWmveV.png) |
