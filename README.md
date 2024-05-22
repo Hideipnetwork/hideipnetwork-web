@@ -20,6 +20,12 @@ curl -fsSL https://get.docker.com | bash -s docker
 docker compose up -d
 ```
 
+###### Magic command :
+
+```
+ hnet://login
+```
+
 ###### Official release page  [official.hideip.network](https://official.hideip.network/)
 
 ## 📃Configuration instructions
