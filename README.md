@@ -59,7 +59,5 @@ discord:[@hideipnetwork](https://discord.com/invite/R4XmveVsF4)
 Developers with code cleanliness please open it yourself
 
 ## 🎞Example
-
-| col1 | col2 |
-| --- | --- |
-|[![JiWbq8l.md.png](https://iili.io/JiWbq8l.md.png)](https://freeimage.host/i/JiWbq8l)  | [![JiWmveV.th.png](https://iili.io/JiWmveV.th.png)](https://freeimage.host/i/JiWmveV) |
+[![JiWbq8l.md.png](https://iili.io/JiWbq8l.md.png)](https://freeimage.host/i/JiWbq8l)
+[![JiWmveV.th.png](https://iili.io/JiWmveV.th.png)](https://freeimage.host/i/JiWmveV)
