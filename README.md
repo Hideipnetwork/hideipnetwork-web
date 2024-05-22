@@ -22,8 +22,6 @@ docker compose up -d
 
 ###### Official release page  [official.hideip.network](https://official.hideip.network/)
 
-
-
 ## 📃Configuration instructions
 
 | .env | requrie| default | **Remark**                                               |
@@ -37,7 +35,7 @@ docker compose up -d
 | MONGDB_CONNECTION ✅ | **yes**|------| You mongodb link  |
 | REDIRECT_HOST ✅| no|------| Website redirect host   |
 
-###### ~~~ socks5 files are in the directory `proxy/socks5.txt` ~~~
+###### ~~~socks5 files are in the directory `proxy/socks5.txt`~~~
 
 ## 🔨~~~Use v2ray|Clash~~~
 
@@ -59,5 +57,7 @@ discord:[@hideipnetwork](https://discord.com/invite/R4XmveVsF4)
 Developers with code cleanliness please open it yourself
 
 ## 🎞Example
-[![JiWbq8l.md.png](https://iili.io/JiWbq8l.md.png)](https://freeimage.host/i/JiWbq8l)
-[![JiWmveV.th.png](https://iili.io/JiWmveV.th.png)](https://freeimage.host/i/JiWmveV)
+
+| col1 | col2 |
+| --- | --- |
+|[![JiWbq8l.md.png](https://iili.io/JiWbq8l.md.png)](https://freeimage.host/i/JiWbq8l)  | [![JiWmveV.th.png](https://iili.io/JiWmveV.md.png)](https://freeimage.host/i/JiWmveV) |
