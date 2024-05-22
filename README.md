@@ -37,7 +37,7 @@ docker compose up -d
 | MONGDB_CONNECTION ✅ | **yes**|------| You mongodb link  |
 | REDIRECT_HOST ✅| no|------| Website redirect host   |
 
-###### ~~~socks5 files are in the directory `proxy/socks5.txt`~~~
+###### ~~~ socks5 files are in the directory `proxy/socks5.txt` ~~~
 
 ## 🔨~~~Use v2ray|Clash~~~
 
