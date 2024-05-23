@@ -1,0 +1,17 @@
+{
+  "name": "hnet-docker",
+  "version": "1.0.1",
+  "description": "",
+  "main": "src/index.mjs",
+  "scripts": {
+    "dev": "node --watch src/index.mjs",
+    "start": "node src/index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "hnet-server": "^2.1.8"
+  }
+}

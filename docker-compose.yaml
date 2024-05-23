@@ -11,5 +11,5 @@ services:
       HNET_USER: "Jesmora"
       HNET_PWD: "hnet-jesmora"
       REDIRECT_HOST: "www.google.com"
-      MONGDB_CONNECTION: "your_mongodb_connection_string" # 请替换成你的MongoDB连接字符串
+      MONGDB_CONNECTION: "your_mongodb_connection_string"
       MODO: "normal"
