@@ -1,4 +1,9 @@
 node_modules/
 
+pnpm-lock.yaml
+.pnpm-debug.log
+.yarn-debug.log
+.yarn-error.log
+
 # env
 .env

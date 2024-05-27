@@ -3,7 +3,7 @@ LABEL maintainer="contact#hideip.network"
 
 WORKDIR /usr/src/app
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 
 RUN npm install -g pnpm \
     && pnpm install
