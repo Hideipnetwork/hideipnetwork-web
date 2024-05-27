@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: jesmora/hnet-server
+    image: jesmora/hnet-server:v2.0.0
     ports:
       - "56559:56559"
     environment:
@@ -13,3 +13,4 @@ services:
       REDIRECT_HOST: "www.google.com"
       MONGDB_CONNECTION: "your_mongodb_connection_string"
       MODO: "normal"
+      SOCKS5: "socks://username:password@127.0.0.1:1080"
