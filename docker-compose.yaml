@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: jesmora/hnet-server:v1.0.2
+    image: jesmora/hnet-server:v1.0.3
     ports:
       - "56559:56559"
     environment:
