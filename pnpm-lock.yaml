@@ -9,8 +9,8 @@ dependencies:
     specifier: ^16.4.5
     version: 16.4.5
   hnet-server:
-    specifier: ^2.1.11
-    version: 2.1.11
+    specifier: ^2.1.12
+    version: 2.1.12
 
 packages:
 
@@ -372,19 +372,20 @@ packages:
       function-bind: 1.1.2
     dev: false
 
-  /hnet-server@2.1.11:
-    resolution: {integrity: sha512-zBme9XBMtQpLY+zQV8ItlnOuvbnh/+bZ13CAIdA/tO5fwDTCzjE5CxXJI8Uc+h9Dbu1te6ZcmsJcE1XsvDLVeg==}
+  /hnet-server@2.1.12:
+    resolution: {integrity: sha512-NDwqe+bjmk+egKEZJOBx9cz+zwtabTZWI9moSAPqrsIczAmrHzyLOKs+F9Zk2difAJlvPOEO/NMDrfxJ1zocEg==}
     dependencies:
       '@tomphttp/bare-server-node': 2.0.3
       cors: 2.8.5
       dotenv: 16.4.5
       express: 4.19.2
       express-jwt: 8.4.1
-      hnet-static: 1.0.2
+      hnet-static: 1.0.3
       js-md5: 0.8.3
       jsonwebtoken: 9.0.2
       mongoose: 8.4.0
       socks-proxy-agent: 7.0.0
+      sw-plugins: 1.0.1
       uuid: 9.0.1
     transitivePeerDependencies:
       - '@aws-sdk/credential-providers'
@@ -399,8 +400,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /hnet-static@1.0.2:
-    resolution: {integrity: sha512-IFrWIwJGKw/LRuYmpc3LUFG7VBM60jHvGw5s8vPWC56qYSM2JHNithlhvyeoSdpwGJpnyS4X8yNwCVLm2kQntw==}
+  /hnet-static@1.0.3:
+    resolution: {integrity: sha512-jYEZuGoSOiwOnio/4ylYMH9fSyLNbiywe5FkV8ObsUzclRGS4p7ZdJWzxaXgFHZxsJj8HXr4soYf+P+lvN23Tw==}
     dev: false
 
   /http-errors@2.0.0:
@@ -829,6 +830,10 @@ packages:
   /statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /sw-plugins@1.0.1:
+    resolution: {integrity: sha512-7VvFfe1FYshmWABiXer0EW5yh2WDvSPYImAC9JMiAdTDym4PHPpVlSjrqYDStlpc2ZisuIiVAZdLgUysFeY+Yg==}
     dev: false
 
   /toidentifier@1.0.1:

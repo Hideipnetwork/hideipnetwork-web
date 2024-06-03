@@ -1,6 +1,6 @@
 {
   "name": "hnet-docker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "src/index.mjs",
   "scripts": {
@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "hnet-server": "^2.1.11"
+    "hnet-server": "^2.1.12"
   }
 }
