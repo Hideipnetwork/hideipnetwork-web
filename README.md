@@ -41,9 +41,9 @@ docker compose up -d
 | MONGDB_CONNECTION ✅ | **yes** | ------       | You mongodb link                                       |
 | REDIRECT_HOST ✅     | no      | ------       | Website redirect host                                  |
 
-###### ~~~socks5 files are in the directory `proxy/socks5.txt`~~~
+###### ~~socks5 files are in the directory `proxy/socks5.txt`~~
 
-## 🔨~~~Use v2ray|Clash~~~
+## 🔨~~Use v2ray|Clash~~
 
 ~~If you want to use the proxy of the airport, please install any client that supports linux or windows on the host computer, such as v2ray, clash, and then add the local proxy `127.0.0.1:port` to the file socks5.txt !!!~~
 
