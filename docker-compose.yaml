@@ -2,15 +2,15 @@ version: '3.8'
 
 services:
   app:
-    image: jesmora/hnet-server:v1.0.3
+    image: jesmora/hnet-server:v1.0.4
     ports:
       - "56559:56559"
     environment:
       HOST: 0.0.0.0
-      SECRET: "hnet-jesmora"
-      HNET_USER: "Jesmora"
-      HNET_PWD: "hnet-jesmora"
+      SECRET: "hnet-secret"
+      HNET_USER: "hnet-admin"
+      HNET_PWD: "hnet-passwd"
       REDIRECT_HOST: "www.google.com"
-      MONGDB_CONNECTION: "your_mongodb_connection_string"
+      MONGDB_CONNECTION: null #如果不需要數據庫請為null
       MODO: "normal"
       SOCKS5: "username:password@127.0.0.1:1080"
