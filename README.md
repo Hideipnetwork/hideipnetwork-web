@@ -34,18 +34,18 @@ docker compose up -d
 | ------------------- | ------- | ------------ | ------------------------------------------------------ |
 | PORT ✅              | no      | 56559        | server port                                            |
 | HOST ✅              | no      | 0.0.0.0      | server resolve ip (docker `0.0.0.0`) other `127.0.0.1` |
-| MODO ❌              | no      | normal       | if you need `socks5 `,change mode to `MODO = socks5`   |
-| SECRET ✅            | **yes** | hnet-jesmora | --                                                     |
-| HNET_USER ✅         | **yes** | Jesmora      | --                                                     |
-| HNET_PWD ✅          | **yes** | hnet-jesmora | --                                                     |
-| MONGDB_CONNECTION ✅ | **yes** | ------       | You mongodb link                                       |
-| REDIRECT_HOST ✅     | no      | ------       | Website redirect host                                  |
+| MODO ✅              | no      | normal       | if you need `socks5 `,change mode to `MODO = socks5`   |
+| SOCKS5              | no      |              | If `MODE` is `socks`                                   |
+| SECRET ✅            | no      | hnet-jesmora | --                                                     |
+| HNET_USER ✅         | no      | Jesmora      | --                                                     |
+| HNET_PWD ✅          | no      | hnet-jesmora | --                                                     |
+| USE_DB              | no      | false        | Whether to enable the database,it is `Boolean`         |
+| MONGDB_CONNECTION ✅ | no      | --           | You mongodb link                                       |
+| REDIRECT_HOST ✅     | no      | --           | Website redirect host                                  |
 
-###### ~~socks5 files are in the directory `proxy/socks5.txt`~~
+## 🔨Use v2ray|Clash
 
-## 🔨~~Use v2ray|Clash~~
-
-~~If you want to use the proxy of the airport, please install any client that supports linux or windows on the host computer, such as v2ray, clash, and then add the local proxy `127.0.0.1:port` to the file socks5.txt !!!~~
+If you want to use the proxy of the airport, please install any client that supports linux or windows on the host computer, such as v2ray, clash, and then add env type `SOCKS5`
 
 ## 💸Donate(TRC20)
 
@@ -73,9 +73,6 @@ Developers with code cleanliness please open it yourself
 > In order to prevent illegal crawling of gitcode in mainland China, relevant banned words have been added.
 
 > 為了防止中國大陸gitcode非法抓攞，特加入相關違禁詞
-> 
-> 
-> 
 > 
 > 數據來源：[中华人民共和国审查词汇列表 | 网协百科 Wiki | Fandom](https://wenxie1216.fandom.com/zh/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%AE%A1%E6%9F%A5%E8%AF%8D%E6%B1%87%E5%88%97%E8%A1%A8?variant=zh)
 
