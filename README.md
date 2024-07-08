@@ -39,7 +39,7 @@ docker compose up -d
 | SECRET ✅            | no      | hnet-jesmora | --                                                     |
 | HNET_USER ✅         | no      | Jesmora      | --                                                     |
 | HNET_PWD ✅          | no      | hnet-jesmora | --                                                     |
-| USE_DB              | no      | false        | Whether to enable the database,it is `Boolean`         |
+| USE_DB ✅            | no      | false        | Whether to enable the database,it is `Boolean`         |
 | MONGDB_CONNECTION ✅ | no      | --           | You mongodb link                                       |
 | REDIRECT_HOST ✅     | no      | --           | Website redirect host                                  |
 
