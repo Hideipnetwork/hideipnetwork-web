@@ -17,7 +17,7 @@ curl -fsSL https://get.docker.com | bash -s docker
 ```
 
 ```
-docker compose up -d
+cd hideipnetwork-web && docker-compose up -d
 ```
 
 ###### Magic command :
