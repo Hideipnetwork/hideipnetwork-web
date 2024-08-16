@@ -1,15 +1,12 @@
 name: Docker Publish
-
 on:
   push:
     branches: ["main"]
   pull_request:
     branches: ["main"]
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -18,7 +15,7 @@ jobs:
         id: package_version
         run: |
           VERSION=$(node -p "require('./package.json').version")
-          echo "::set-output name=version::$VERSION"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Increment patch version
         id: increment_version
@@ -28,7 +25,7 @@ jobs:
           MINOR=${VERSION_PARTS[1]}
           PATCH=$((VERSION_PARTS[2] + 1))
           NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
-          echo "::set-output name=new_version::$NEW_VERSION"
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
 
       - name: Update package.json
         run: |
