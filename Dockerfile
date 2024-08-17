@@ -1,4 +1,4 @@
-FROM node:20.12.2
+FROM node:21.7.3
 LABEL maintainer="contact#hideip.network"
 
 WORKDIR /usr/src/app
