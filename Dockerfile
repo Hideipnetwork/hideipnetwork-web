@@ -3,7 +3,7 @@ LABEL maintainer="contact#hideip.network"
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY package*.json ./
 
 RUN npm install -g pnpm \
     && pnpm install
@@ -16,7 +16,7 @@ ENV PORT=56559 \
     HNET_USER=hnet-admin \
     HNET_PWD=hnet-passwd \
     REDIRECT_HOST=www.google.com \
-    MONGDB_CONNECTION=null \
+    MONGODB_CONNECTION=null \
     USE_DB=false \
     MODO=normal
 

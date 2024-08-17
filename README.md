@@ -17,7 +17,7 @@ curl -fsSL https://get.docker.com | bash -s docker
 ```
 
 ```
-docker compose up -d
+cd hideipnetwork-web && docker compose up -d
 ```
 
 ###### Magic command :
@@ -40,7 +40,7 @@ docker compose up -d
 | HNET_USER ✅         | no      | Jesmora      | --                                                     |
 | HNET_PWD ✅          | no      | hnet-jesmora | --                                                     |
 | USE_DB ✅            | no      | false        | Whether to enable the database,it is `Boolean`         |
-| MONGDB_CONNECTION ✅ | no      | --           | You mongodb link                                       |
+| MONGODB_CONNECTION ✅ | no      | --           | You mongodb link                                       |
 | REDIRECT_HOST ✅     | no      | --           | Website redirect host                                  |
 
 ## 🔨Use v2ray|Clash
