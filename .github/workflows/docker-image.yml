@@ -1,30 +1,32 @@
 name: Docker Publish
+
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "pro"]
     paths:
       - 'src/**'
       - 'package.json'
       - 'Dockerfile'
   pull_request:
-    branches: ["main"]
+    branches: ["main", "pro"]
     paths:
       - 'src/**'
       - 'package.json'
       - 'Dockerfile'
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+        
       - name: Get version from package.json
         id: package_version
         run: |
           VERSION=$(node -p "require('./package.json').version")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-
+        
       - name: Increment patch version
         id: increment_version
         run: |
@@ -34,12 +36,12 @@ jobs:
           PATCH=$((VERSION_PARTS[2] + 1))
           NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
           echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
-
+        
       - name: Update package.json
         run: |
           NEW_VERSION="${{ steps.increment_version.outputs.new_version }}"
           npm version $NEW_VERSION --no-git-tag-version
-
+        
       - name: Commit package.json changes
         run: |
           git config --local user.email "action@github.com"
@@ -47,27 +49,34 @@ jobs:
           git add package.json
           git commit -m "Bump version to ${{ steps.increment_version.outputs.new_version }}"
           git push
-
+        
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
         with:
           platforms: arm64,amd64
-
+        
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-
+        
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-
+        
+      - name: Set Docker image tags
+        id: set_tags
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/pro" ]]; then
+            echo "tags=jesmora/hnet-server-pro:latest" >> $GITHUB_OUTPUT
+          else
+            echo "tags=jesmora/hnet-server:latest,jesmora/hnet-server:${{ steps.increment_version.outputs.new_version }}" >> $GITHUB_OUTPUT
+          fi
+        
       - name: Build and Push to Docker Hub
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: |
-            jesmora/hnet-server:latest
-            jesmora/hnet-server:${{ steps.increment_version.outputs.new_version }}
+          tags: ${{ steps.set_tags.outputs.tags }}
