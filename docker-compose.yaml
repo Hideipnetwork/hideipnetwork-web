@@ -8,10 +8,7 @@ services:
     environment:
       HOST: 0.0.0.0
       SECRET: "hnet-secret"
-      HNET_USER: "hnet-admin"
-      HNET_PWD: "hnet-passwd"
       REDIRECT_HOST: "www.google.com"
       MONGODB_CONNECTION: "http://localhost:27017"
-      USE_DB: false
       MODO: "normal"
       SOCKS5: "username:password@127.0.0.1:1080"

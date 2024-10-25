@@ -1,4 +1,4 @@
-import hnetServer from "hnet-server"
+import hnetServer from "@hnet/hnet-server"
 import dotEnv from "dotenv"
 
 dotEnv.config()

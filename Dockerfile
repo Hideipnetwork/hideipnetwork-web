@@ -13,11 +13,8 @@ COPY . .
 ENV PORT=56559 \
     HOST=0.0.0.0 \
     SECRET=hnet-secret \
-    HNET_USER=hnet-admin \
-    HNET_PWD=hnet-passwd \
     REDIRECT_HOST=www.google.com \
     MONGODB_CONNECTION=null \
-    USE_DB=false \
     MODO=normal
 
 EXPOSE 56559
