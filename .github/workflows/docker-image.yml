@@ -1,13 +1,13 @@
 name: Docker Publish
 on:
   push:
-    branches: ["main"]
+    branches: ["pro"]
     paths:
       - 'src/**'
       - 'package.json'
       - 'Dockerfile'
   pull_request:
-    branches: ["main"]
+    branches: ["pro"]
     paths:
       - 'src/**'
       - 'package.json'
@@ -69,5 +69,5 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            jesmora/hnet-server:latest
-            jesmora/hnet-server:${{ steps.increment_version.outputs.new_version }}
+            jesmora/hnet-server-pro:latest
+            jesmora/hnet-server-pro:${{ steps.increment_version.outputs.new_version }}
