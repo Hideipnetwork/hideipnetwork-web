@@ -1,0 +1,75 @@
+name: Docker
+
+on:
+  push:
+    branches: ["pro"]
+    paths:
+      - 'src/'
+      - 'package.json'
+      - 'Dockerfile'
+  pull_request:
+    branches: ["pro"]
+    paths:
+      - 'src/'
+      - 'package.json'
+      - 'Dockerfile'
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Get version from package.json
+        id: package_version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Increment patch version
+        id: increment_version
+        run: |
+          IFS='.' read -ra VERSION_PARTS <<< "${{ steps.package_version.outputs.version }}"
+          MAJOR=${VERSION_PARTS[0]}
+          MINOR=${VERSION_PARTS[1]}
+          PATCH=$((VERSION_PARTS[2] + 1))
+          NEW_VERSION="${MAJOR}.${MINOR}.${PATCH}"
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Update package.json
+        run: |
+          NEW_VERSION="${{ steps.increment_version.outputs.new_version }}"
+          npm version $NEW_VERSION --no-git-tag-version
+
+      - name: Commit package.json changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add package.json
+          git commit -m "Bump version to ${{ steps.increment_version.outputs.new_version }}"
+          git push
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64,amd64
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Build and Push to Docker Hub
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: |
+            jesmora/hnet-server-pro:latest
+            jesmora/hnet-server-pro:${{ steps.increment_version.outputs.new_version }}
