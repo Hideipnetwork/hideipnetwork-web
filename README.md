@@ -48,6 +48,25 @@ cd hideipnetwork-web && docker compose up -d
 
 If you want to use the proxy of the airport, please install any client that supports linux or windows on the host computer, such as v2ray, clash, and then add env type `SOCKS5`
 
+## Nginx
+``` conf
+location / { 
+        set $upstream_host $http_upstream_host; 
+        proxy_busy_buffers_size 512k; 
+        proxy_buffers 4 512k; 
+        proxy_buffer_size 256k; 
+        proxy_pass http://nodes; 
+        proxy_http_version 1.1; 
+        proxy_set_header Upgrade $http_upgrade; 
+        proxy_set_header Connection 'Upgrade'; 
+        proxy_set_header X-Real-IP $remote_addr; 
+        proxy_set_header X-Forwarded-Host $host:$server_port; 
+        proxy_set_header X-Forwarded-Server $host; 
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+        proxy_set_header Host $host;
+} 
+```
+
 ## 💸Donate(TRC20)
 
 [](https://github.com/Hideipnetwork/hideipnetwork-web#donatetrc20)
