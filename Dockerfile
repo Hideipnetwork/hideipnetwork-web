@@ -16,6 +16,7 @@ ENV PORT=56559 \
     REDIRECT_HOST=www.google.com \
     MONGODB_CONNECTION=null \
     MODO=normal
+    CHECKCODE=hideipnetwork
 
 EXPOSE 56559
 

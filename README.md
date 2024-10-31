@@ -39,7 +39,7 @@ cd hideipnetwork-web && docker compose up -d
 | MODO ✅               | no      | normal       | if you need `socks5 `,change mode to `MODO = socks5`   |
 | SOCKS5                | no      |              | If `MODE`is `socks`                                    |
 | SECRET ✅             | no      | hnet-jesmora | --                                                             |
-| MONGODB_CONNECTION ✅ | no      | --           | You mongodb link                                               |
+| MONGODB_CONNECTION ✅ | yes      | --           | You mongodb link                                               |
 | REDIRECT_HOST ✅      | no      | --           | Website redirect host                                          |
 
 ## 🔨Use v2ray|Clash

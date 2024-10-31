@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hnet/hnet-server": "^0.0.1",
+    "@hnet/hnet-server": "^0.0.2",
     "dotenv": "^16.4.5"
   }
 }
