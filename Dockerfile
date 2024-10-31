@@ -15,7 +15,7 @@ ENV PORT=56559 \
     SECRET=hnet-secret \
     REDIRECT_HOST=www.google.com \
     MONGODB_CONNECTION=null \
-    MODO=normal
+    MODO=normal \
     CHECKCODE=hideipnetwork
 
 EXPOSE 56559
