@@ -15,4 +15,3 @@ services:
       CHECKCODE: "hideipnetwork"
 volumes:
   hnet_data:
-      
