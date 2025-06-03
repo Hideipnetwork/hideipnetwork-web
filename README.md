@@ -1,3 +1,5 @@
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
 # Hideipnetwork Server
 
 hideipnetwork was developed to evade censorship on the web
@@ -23,7 +25,7 @@ cd hideipnetwork-web && docker compose up -d
 ###### Magic command :
 
 ```
- hnet://login
+hnet://login
 ```
 
 ###### Official release page  [official.hideip.network](https://official.hideip.network/)
@@ -48,7 +50,8 @@ cd hideipnetwork-web && docker compose up -d
 If you want to use the proxy of the airport, please install any client that supports linux or windows on the host computer, such as v2ray, clash, and then add env type `SOCKS5`
 
 ## Nginx
-``` conf
+
+```conf
 location / { 
         proxy_busy_buffers_size 512k; 
         proxy_buffers 4 512k; 
@@ -62,7 +65,7 @@ location / {
         proxy_set_header X-Forwarded-Server $host; 
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
         proxy_set_header Host $host;
-} 
+}
 ```
 
 ## 💸Donate(TRC20)
@@ -84,7 +87,7 @@ Developers with code cleanliness please open it yourself
 
 | Desktop1                                                                                                                                                        | Desktop2                                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![JiWbq8l.md.png](https://public.aisb.top/e06e8a0ef1a018d7b6944df936f2a3c1/JiWbq8l.png)](https://public.aisb.top/e06e8a0ef1a018d7b6944df936f2a3c1/JiWbq8l.png) | [![JiWmveV.th.png](https://public.aisb.top/e06e8a0ef1a018d7b6944df936f2a3c1/JiWmveV.png)](https://public.aisb.top/e06e8a0ef1a018d7b6944df936f2a3c1/JiWmveV.png) |
+| [![JiWbq8l.md.png](https://iili.io/JiWbq8l.png)](https://public.aisb.top/e06e8a0ef1a018d7b6944df936f2a3c1/JiWbq8l.png) | [![JiWmveV.th.png](https://iili.io/JiWmveV.png)](https://public.aisb.top/e06e8a0ef1a018d7b6944df936f2a3c1/JiWmveV.png) |
 
 #### Additional
 
