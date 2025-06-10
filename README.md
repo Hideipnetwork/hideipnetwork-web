@@ -1,5 +1,3 @@
-[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
-
 # Hideipnetwork Server
 
 hideipnetwork was developed to evade censorship on the web
@@ -36,8 +34,8 @@ hnet://login
 | ------------------- | ------- | ------------ | ------------------------------------------------------ |
 | PORT ✅              | no      | 56559        | server port                                            |
 | HOST ✅              | no      | 0.0.0.0      | server resolve ip (docker `0.0.0.0`) other `127.0.0.1` |
-| MODO ✅              | no      | normal       | if you need `socks5 `,change mode to `MODO = socks5`   |
-| SOCKS5              | no      |              | If `MODE` is `socks`                                   |
+| MODO ✅              | no      | normal       | if you need `socks5 `,change mode to `MODO = socks5`   |
+| SOCKS5              | no      |              | If `MODE` is `socks`                                   |
 | SECRET ✅            | no      | hnet-jesmora | --                                                     |
 | HNET_USER ✅         | no      | Jesmora      | --                                                     |
 | HNET_PWD ✅          | no      | hnet-jesmora | --                                                     |
