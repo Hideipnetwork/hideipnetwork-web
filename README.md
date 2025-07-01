@@ -39,6 +39,7 @@ hnet://login
 | SECRET ✅            | no      | hnet-jesmora | --                                                     |
 | HNET_USER ✅         | no      | Jesmora      | --                                                     |
 | HNET_PWD ✅          | no      | hnet-jesmora | --                                                     |
+| FRONT_PWD ✅          | no      |  | Front password                                                   |
 | USE_DB ✅            | no      | false        | Whether to enable the database,it is `Boolean`         |
 | MONGODB_CONNECTION ✅ | no      | --           | You mongodb link                                       |
 | REDIRECT_HOST ✅     | no      | --           | Website redirect host                                  |
