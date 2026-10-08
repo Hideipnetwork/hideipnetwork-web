@@ -2,7 +2,7 @@
 
 hideipnetwork was developed to evade censorship on the web
 
-**`Main Demo`** ：[https://hideip.network](https://hideip.network/)
+**`Main Demo`** ：[https://beta.hideip.network](https://beta.hideip.network/)
 
 ---
 
